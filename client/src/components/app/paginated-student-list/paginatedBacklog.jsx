@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Pagination } from "./paginatedBacklog/pagination/pagination.jsx";
 import { Backlog } from "./paginatedBacklog/pagination/Backlog.jsx";
 import { API_TOKEN, API_URL } from "../../../constants/constants.js";
+import { StudentList } from "./student-list/student-list.jsx";
 
 const ITEMS_PER_PAGE = 5;
 
@@ -48,6 +49,7 @@ export function PaginatedBacklog() {
     <>
       <div style={{ marginBottom: "2rem" }}>
         <Backlog items={currentTasks} />
+        <StudentList students={StudentList} />
       </div>
       <Pagination
         currentPage={currentPage}
