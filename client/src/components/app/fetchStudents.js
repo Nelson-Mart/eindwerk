@@ -10,5 +10,8 @@ export async function fetchStudents(page, pageSize) {
         }
     );
     const data = await result.json();
-    return data
+    return {
+        students: data.data, 
+        pagination: data.meta.pagination, 
+    };
 }
